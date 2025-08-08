@@ -1,8 +1,5 @@
 <template>
-
-  <div style="padding: 1rem">
-    <router-link to="/" style="text-decoration: none; font-weight: bold;">⬅ 返回首頁</router-link>
-  </div>
+  <Header />
   
   <div class="container">
     <h2>圖片壓縮與批次處理</h2>
@@ -62,6 +59,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import Header from '../components/Header.vue'
 import JSZip from 'jszip'
 
 // 定義 reactive 狀態
@@ -169,19 +167,6 @@ async function processChunk(chunk, batchIndex) {
   isProcessing.value = false
 }
 
-function loadImage(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader()
-    reader.onload = () => {
-      const img = new Image()
-      img.onload = () => resolve(img)
-      img.onerror = reject
-      img.src = reader.result
-    }
-    reader.onerror = reject
-    reader.readAsDataURL(file)
-  })
-}
 </script>
 
 <style scoped>
