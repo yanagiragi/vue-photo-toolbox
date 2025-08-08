@@ -2,7 +2,7 @@
   <Header />
   
   <div class="container">
-    <h2>圖片壓縮與批次處理</h2>
+    <h2>降低圖片解析度</h2>
 
     <div class="control-bar">
       <label>每批處理張數：</label>
@@ -47,6 +47,7 @@
     </div>
 
     <div v-if="zipBlob">
+      <h3>壓縮完成</h3>
       <a
         :href="zipUrl"
         :download="`compressed_images_batch_${currentBatchIndex + 1}.zip`"

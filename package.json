@@ -11,6 +11,7 @@
   "dependencies": {
     "browser-fs-access": "^0.38.0",
     "file-saver": "^2.0.5",
+    "gif.js.optimized": "^1.0.1",
     "jszip": "^3.10.1",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
