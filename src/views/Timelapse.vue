@@ -2,7 +2,7 @@
   <Header />
 
   <div class="container">
-    <h2>GIF Timelapse 生成器</h2>
+    <h2>Timelapse GIF 生成器</h2>
 
     <input type="file" multiple accept="image/*" @change="handleFiles" />
     
@@ -140,4 +140,5 @@ ul {
 button {
   margin-bottom: 8px;
 }
+
 </style>
