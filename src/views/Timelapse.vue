@@ -5,13 +5,13 @@
     <h2>Timelapse GIF 生成器</h2>
 
     <input type="file" multiple accept="image/*" @change="handleFiles" />
+
+    <label>
+      幀率 (FPS): 
+      <input type="number" v-model.number="fps" min="1" max="30" />
+    </label>
     
     <div v-if="images.length > 0" class="settings">
-      <label>
-        幀率 (FPS): 
-        <input type="number" v-model.number="fps" min="1" max="30" />
-      </label>
-
       <button @click="generateGif" :disabled="processing">
         開始生成 GIF
         <span v-if="done">✅</span>
@@ -74,7 +74,7 @@ async function generateGif() {
   const gif = new GIF({
     workers: 2,
     quality: 10,
-    workerScript: `${import.meta.env.BASE_URL}/gif.worker.js`,
+    workerScript: `${import.meta.env.BASE_URL}gif.worker.js`,
     width: width,
     height: height
   })
@@ -129,10 +129,12 @@ function loadImage(src) {
   font-family: sans-serif;
   padding: 1rem;
 }
-.settings label {
+
+.settings {
   display: block;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
+
 ul {
   list-style: none;
   padding: 0;
