@@ -138,8 +138,8 @@ async function prepareFrames() {
     canvas.width = firstBitmap.width
     canvas.height = firstBitmap.height
 
-    const maxWidth = window.innerWidth * 0.9  // 保留點 margin
-    const maxHeight = window.innerHeight * 0.8 // 保留點 margin
+    const maxWidth = document.documentElement.clientWidth * 0.9  // 保留點 margin
+    const maxHeight = document.documentElement.clientHeight * 0.8 // 保留點 margin
 
     let scale = Math.min(maxWidth / firstBitmap.width, maxHeight / firstBitmap.height, 1) // 不放大超過 100%
     canvas.style.width = `${firstBitmap.width * scale}px`
