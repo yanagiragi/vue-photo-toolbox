@@ -1,1 +1,1 @@
-{"name":"Photo ToolBox","short_name":"PT","description":"Photo ToolBox","start_url":"/vue-photo-toolbox/","display":"standalone","background_color":"#ffffff","theme_color":"#ffffff","lang":"en","scope":"/vue-photo-toolbox/","icons":[]}
+{"name":"Photo ToolBox","short_name":"PT","description":"Photo ToolBox","start_url":"/vue-photo-toolbox/","display":"standalone","background_color":"#ffffff","theme_color":"#ffffff","lang":"en","scope":"/vue-photo-toolbox/","icons":[{"src":"pwa-192x192.png","sizes":"192x192","type":"image/png"}]}
