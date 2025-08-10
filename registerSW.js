@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/vue-photo-toolbox/sw.js', { scope: '/vue-photo-toolbox/' })})}
